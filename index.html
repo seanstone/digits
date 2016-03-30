@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>DIGITS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+		<!-- lib -->
+		<script src="lib/jquery.min.js"></script>
+		<script src="lib/huewheel.min.js"></script>
+		<!-- src -->
+		<script src="src/main.js"></script>
+		<script>$(function(){main();});</script>
+
+		<style>
+
+			html, body {
+				width:100%;	height:100%;
+				overflow: hidden;
+			}
+
+			#container {
+				position: relative;
+				width:100%; height:100%;
+			}
+
+			body, .inputNum {
+				background-color:black;
+				color:white;
+				font-size: 33px;
+			}
+
+			body, .inputNum, #send {
+				font-family:'微軟正黑體', sans-serif;
+			}
+
+			#main {
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+				width: 100%
+			    -webkit-transform: translate(-50%, -50%);
+			    transform: translate(-50%, -50%);
+			}
+
+			#form {
+				display: inline-block;
+			}
+
+			#colorwheel {
+				display: inline-block;
+				position: relative;
+				top: 0%;
+				right: -15%;
+			}
+
+			.inputNum {
+				border-width:0px;
+				text-align: center;
+				text-decoration: underline;
+			}
+
+			#year {
+				width:6ex;
+			}
+			#month {
+				width:4ex;
+			}
+			#day {
+				width:4ex;
+			}
+			#number {
+				width:3ex;
+			}
+
+			#send {
+				font-size: 24px;
+				-moz-border-radius: 15px;
+				-webkit-border-radius: 15px;
+				border: 1px solid #000099;
+				padding: 5px;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id='container'>
+			<div id='main'>
+				<form id='form' action='' method='post'>
+					<table>
+						<tr>我的生日是</br></tr>
+						<tr>
+							<input id='year' class='inputNum' type='number' name='year' value='2005' min="0" max="9999">年
+							<input id='month' class='inputNum' type='number' name='month' value='12' min="1" max="12">月
+							<input id='day' class='inputNum' type='number' name='day' value='31' min="1" max="31">日</br></br>
+						</tr>
+						<tr>
+							<td>生命靈數是</td>
+							<td><input id='number' class='inputNum' type='number' name='number' value='5'></td>
+						</tr>
+						<tr hidden>
+							<td>Access Token:</td>
+							<td><input type='text' name='access_token' value=''></td>
+						</tr>
+					</table>
+					</br>
+					<input id='send' type='submit' value='送出'>
+				</form>
+				<span id='colorwheel'></span>
+			</div>
+		</div>
+
+	</body>
+
+</html>
