@@ -10,6 +10,7 @@
 		<script src="lib/jquery.min.js"></script>
 		<script src="lib/huewheel.min.js"></script>
 		<!-- src -->
+		<script src="src/auth.js"></script>
 		<script src="src/main.js"></script>
 		<script>$(function(){main();});</script>
 
@@ -90,7 +91,7 @@
 
 		<div id='container'>
 			<div id='main'>
-				<form id='form' action='' method='post'>
+				<form id='form'>
 					<table>
 						<tr>我的生日是</br></tr>
 						<tr>
@@ -102,13 +103,9 @@
 							<td>生命靈數是</td>
 							<td><input id='number' class='inputNum' type='number' name='number' value='5'></td>
 						</tr>
-						<tr hidden>
-							<td>Access Token:</td>
-							<td><input type='text' name='access_token' value=''></td>
-						</tr>
 					</table>
 					</br>
-					<input id='send' type='submit' value='送出'>
+					<input id='send' type='button' onclick='digits()' value='送出'>
 				</form>
 				<span id='colorwheel'></span>
 			</div>
