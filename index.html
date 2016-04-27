@@ -27,9 +27,13 @@
 			}
 
 			body, .inputNum {
+				color: white;
 				background-color:black;
-				color:white;
 				font-size: 33px;
+			}
+
+			.inputNum {
+				color: cyan;
 			}
 
 			body, .inputNum, #send {
@@ -39,27 +43,32 @@
 			#main {
 				position: absolute;
 			    top: 50%;
-			    left: 50%;
+			    left: 30%;
 				width: 100%
-			    -webkit-transform: translate(-50%, -50%);
-			    transform: translate(-50%, -50%);
+			    -webkit-transform: translate(-30%, -50%);
+			    transform: translate(-30%, -50%);
 			}
 
 			#form {
 				display: inline-block;
 			}
 
-			#colorwheel {
+			#color {
+				display: inline-block;
+			}
+
+			#colorwheel,
+
+			#colorwheel, #warm, #cool, #rainbow {
 				display: inline-block;
 				position: relative;
-				top: 0%;
-				right: -15%;
+				text-align: center;
+
 			}
 
 			.inputNum {
 				border-width:0px;
 				text-align: center;
-				text-decoration: underline;
 			}
 
 			#year {
@@ -100,14 +109,18 @@
 							<input id='day' class='inputNum' type='number' name='day' value='31' min="1" max="31">日</br></br>
 						</tr>
 						<tr>
-							<td>生命靈數是</td>
+							<td>生日位數根是</td>
 							<td><input id='digit' class='inputNum' type='number' name='digit' value='5'></td>
 						</tr>
-					</table>
-					</br>
+					</table></br>
 					<input id='send' type='button' onclick='digits()' value='送出'>
 				</form>
-				<span id='colorwheel'></span>
+				<div id='color'>
+					<span id='colorwheel' onclick='ccolor()' ></span></br>
+					<img id='warm' src="warm.png" onclick='cwarm()' height="100" width="100">
+					<img id='cool' src="cool.png" onclick='ccool()' height="100" width="100">
+					<img id='rainbow' src="rainbow.png" onclick='crainbow()' height="100" width="100">
+				</div>
 			</div>
 		</div>
 
