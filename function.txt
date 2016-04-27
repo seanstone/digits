@@ -1,0 +1,7 @@
+Particle.function("lifeDigit",lifeDigit); // (year+month+day)%9, no zero value
+Particle.function("confirmNum",confirmNum);  // audience's calcuation result is correct or not, , correct=1, not correct=0
+Particle.function("inputR",inputR);
+Particle.function("inputG",inputG);
+Particle.function("inputB",inputB);
+Particle.function("inputCtype",inputCtype); //color type, single 1, warm 2, cool 3, rainbow 4
+Particle.function("thisMonth",thisMonth); //month of birthday is equal to current month, yes=1, no=0
