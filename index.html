@@ -80,7 +80,7 @@
 			#day {
 				width:4ex;
 			}
-			#number {
+			#digit {
 				width:3ex;
 			}
 
@@ -90,6 +90,23 @@
 				-webkit-border-radius: 15px;
 				border: 1px solid #000099;
 				padding: 5px;
+			}
+
+			.english {
+				font-size: 20px;
+			}
+
+			#color {
+				margin:10px;
+				margin-left:30px;
+				text-align: center;
+			}
+
+			#colorwheel {
+				margin-bottom:30px;
+			}
+			#warm, #cool, #rainbow {
+				margin:5px;
 			}
 
 		</style>
@@ -102,14 +119,17 @@
 			<div id='main'>
 				<form id='form'>
 					<table>
-						<tr>我的生日是</br></tr>
+						<tr><td>我的生日是</br><span class='english'>My birthday is</span></br></br></td></tr>
+						<tr><td>
+							<input id='year' class='inputNum' type='number' name='year' value='2005' min="0" max="9999">
+							/
+							<input id='month' class='inputNum' type='number' name='month' value='12' min="1" max="12">
+							/
+							<input id='day' class='inputNum' type='number' name='day' value='31' min="1" max="31">
+							</br></br>
+						</td></tr>
 						<tr>
-							<input id='year' class='inputNum' type='number' name='year' value='2005' min="0" max="9999">年
-							<input id='month' class='inputNum' type='number' name='month' value='12' min="1" max="12">月
-							<input id='day' class='inputNum' type='number' name='day' value='31' min="1" max="31">日</br></br>
-						</tr>
-						<tr>
-							<td>生日位數根是</td>
+							<td>生日位數根是</br><span class='english'>Digital root of my birthday is</span></br></td>
 							<td><input id='digit' class='inputNum' type='number' name='digit' value='5'></td>
 						</tr>
 					</table></br>

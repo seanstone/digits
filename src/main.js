@@ -77,14 +77,6 @@ function digits()
 	var inputB = Math.floor(hw.rgb().b/colorFactor);
 	var thisMonth = (month == Number(new Date().getMonth()+1) ? 1 : 0) ; //month of birthday is equal to current month, yes=1, no=0
 
-	//alert(lifeDigit);
-	//alert(confirmNum);
-	//alert(inputCtype);
-	//alert(inputR);
-	//alert(inputG);
-	//alert(inputB);
-	//alert(new Date().getMonth());
-
 	var input
 	= lifeDigit
 	+ confirmNum * 10
@@ -92,7 +84,7 @@ function digits()
 	+ inputG * 10 * 2 * 256
 	+ inputB * 10 * 2 * 256 * 256
 	+ inputCtype * 10 * 2 * 256 * 256 * 256
-	+ thisMonth * 10 * 2 * 256 * 256 * 256 * 4;
+	+ thisMonth * 10 * 2 * 256 * 256 * 256 * 5;
 
 	//alert(input);
 
