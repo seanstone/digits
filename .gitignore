@@ -1,3 +1,5 @@
-src/auth.js
+*.apk
 *.exe
+*.zip
+auth.js
 index_old.html

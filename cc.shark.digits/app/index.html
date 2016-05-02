@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>DIGITS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+		<!-- lib -->
+		<script src="lib/jquery.min.js"></script>
+		<script src="lib/huewheel.js"></script>
+		<!-- src -->
+		<script src="src/auth.js"></script>
+		<script src="src/main.js"></script>
+		<script>$(function(){main();});</script>
+
+		<style>
+
+			html, body {
+				width:100%;	height:100%;
+
+			}
+
+			#container {
+				position: relative;
+				width:100%; height:100%;
+			}
+
+			body, .inputNum {
+				color: white;
+				background-color:black;
+				font-size: 33px;
+			}
+
+			.inputNum {
+				color: cyan;
+			}
+
+			body, .inputNum, #send {
+				font-family:'微軟正黑體', sans-serif;
+			}
+
+			#main {
+				position: absolute;
+			    top: 50%;
+			    left: 30%;
+				width: 100%
+			    -webkit-transform: translate(-30%, -50%);
+			    transform: translate(-30%, -50%);
+			}
+
+			#form {
+				display: inline-block;
+			}
+
+			#color {
+				display: inline-block;
+			}
+
+			#colorwheel,
+
+			#colorwheel, #warm, #cool, #rainbow {
+				display: inline-block;
+				position: relative;
+				text-align: center;
+
+			}
+
+			.inputNum {
+				border-width:0px;
+				text-align: center;
+			}
+
+			#year {
+				width:6ex;
+			}
+			#month {
+				width:4ex;
+			}
+			#day {
+				width:4ex;
+			}
+			#digit {
+				width:3ex;
+			}
+
+			#send {
+				font-size: 24px;
+				-moz-border-radius: 15px;
+				-webkit-border-radius: 15px;
+				border: 1px solid #000099;
+				padding: 5px;
+			}
+
+			.english {
+				font-size: 20px;
+			}
+
+			#color {
+				margin:10px;
+				margin-left:30px;
+				text-align: center;
+			}
+
+			#colorwheel {
+				margin-bottom:30px;
+			}
+			#warm, #cool, #rainbow {
+				margin:5px;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id='container'>
+			<div id='main'>
+				<form id='form'>
+					<table>
+						<tr><td>我的生日是</br><span class='english'>My birthday is</span></br></br></td></tr>
+						<tr><td>
+							<input id='year' class='inputNum' type='number' name='year' value='2005' min="0" max="9999">
+							/
+							<input id='month' class='inputNum' type='number' name='month' value='12' min="1" max="12">
+							/
+							<input id='day' class='inputNum' type='number' name='day' value='31' min="1" max="31">
+							</br></br>
+						</td></tr>
+						<tr>
+							<td>生日位數根是</br><span class='english'>Digital root of my birthday is</span></br></td>
+							<td><input id='digit' class='inputNum' type='number' name='digit' value='5'></td>
+						</tr>
+					</table></br>
+				</form>
+				<div id='color'>
+					<span id='colorwheel' onclick='ccolor()' ></span></br>
+					<img id='warm' src="warm.png" onclick='cwarm()' height="100" width="100">
+					<img id='cool' src="cool.png" onclick='ccool()' height="100" width="100">
+					<img id='rainbow' src="rainbow.png" onclick='crainbow()' height="100" width="100">
+				</div>
+			</br>
+				<input id='send' type='button' onclick='digits()' value='送出'>
+			</div>
+		</div>
+
+	</body>
+
+</html>
